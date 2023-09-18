@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-        plugin = {"json:target/cucumber-reports/Cucumber.json"},
+        plugin = {"json:target/cucumber-reports/report.json"},
         features = "src/test/resources/features",
         glue = {"com/openlending/stepDefinitions"},
         dryRun = false,
