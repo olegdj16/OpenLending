@@ -12,12 +12,13 @@ import org.junit.runner.RunWith;
                 "html:target/cucumber/report.html",
                 "junit:target/junit/junit-report.xml",
                 "rerun:target/rerun.txt",
-                "me.jvt.cucumber.report.PrettyReports:target/cucumber"
+
         },
         features = "src/test/resources/features",
         glue = {"com/openlending/stepDefinitions"},
         dryRun = false,
-        tags = "@no_duplicates"
+        tags = "@no_duplicates",
+        publish = true
 
 )
 public class TestRunner {
