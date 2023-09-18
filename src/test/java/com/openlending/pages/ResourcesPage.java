@@ -54,9 +54,9 @@ public class ResourcesPage {
 
     public List<WebElement> getParagraphElements() {
         List<WebElement> paragraphElements = driver.findElements(By.xpath("//div[@class='paragraph-p2']"));
-        for (WebElement element : paragraphElements) {
-            System.out.println(element.getText().trim());
-        }
+//        for (WebElement element : paragraphElements) {
+//            System.out.println(element.getText().trim());
+//        }
         return paragraphElements;
     }
 }
