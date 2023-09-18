@@ -1,20 +1,19 @@
 package com.openlending.utils;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import lombok.Data;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-@Data
+
 public class Driver {
     static String browser;
 
@@ -28,7 +27,7 @@ public class Driver {
         return driver;
     }
 
-    @BeforeMethod
+    @Before
     public static void setupDriver() {
         String browserType = ConfigurationReader.getProperty("browser").toLowerCase();
         if (driver == null) {
@@ -76,7 +75,7 @@ public class Driver {
         }
     }
 
-    @AfterMethod
+    @After
     public static void closeDriver() {
         if (driver != null) {
             driver.quit();

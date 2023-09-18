@@ -13,7 +13,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ResourcesStepDefinition extends Driver {
+import static com.openlending.utils.Driver.getDriver;
+
+public class ResourcesStepDefinition{
     private ResourcesPage resourcesPage;
     private Scenario scenario;
     private Map<String, Integer> blogEntries;

@@ -11,8 +11,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = {"com/openlending/stepDefinitions"},
         dryRun = false,
-        tags = "@no_duplicates",
-        publish = true
+        tags = "@no_duplicates"
 
 )
 public class TestRunner {
